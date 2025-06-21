@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreyansh Mani Tripathi - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -16,7 +17,7 @@
             color: #333;
         }
         header {
-            background-color: #003366;
+            background: linear-gradient(135deg, #003366, #006699);
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -26,41 +27,80 @@
             font-weight: 900;
             margin: 0 0 10px;
             color: white;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #aad4ff; }
+            to { text-shadow: 0 0 20px #ffffff, 0 0 30px #aad4ff; }
         }
         .contact-info {
             margin-top: 10px;
             font-size: 16px;
+        }
+        .contact-info a {
+            color: #aad4ff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact-info a:hover {
+            text-shadow: 0 0 5px #aad4ff;
         }
         .container {
             display: flex;
             flex-wrap: wrap;
             max-width: 1200px;
             margin: 20px auto;
-            background-color: #ffffff;
+            background-color: white;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 0;
+            color: #333;
         }
-        .photo {
-            flex: 0 0 240px;
+        .photo-section {
+            flex: 0 0 280px;
+            background-color: #003366;
             text-align: center;
-            margin-right: 20px;
+            padding: 20px;
+            color: white;
         }
-        .photo img {
-            width: 100%;
-            max-width: 240px;
-            border-radius: 10px;
+        .photo-section img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .hobbies-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .hobbies-section h3 {
+            margin-bottom: 10px;
+        }
+        .hobbies-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .hobbies-section li {
+            margin-bottom: 8px;
         }
         .right {
             flex: 1;
+            padding: 20px;
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #003366;
         }
-        header h1, header p {
-            color: white;
+        h3#str {
+            color: #02021a;
+        }
+         h3#hob {
+            color: #efeff5;
+        }
+        h3#str {
+            color: #e4e4f0;
         }
         h2 {
             border-bottom: 2px solid #e0e0e0;
@@ -77,6 +117,17 @@
         .project {
             margin-bottom: 25px;
         }
+        .right section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .right section:hover {
+            transform: translateY(-5px);
+        }
         footer {
             background-color: #003366;
             color: white;
@@ -91,82 +142,87 @@
         <h1>Shreyansh Mani Tripathi</h1>
         <p>QA Engineer | Web Automation | CI/CD | Selenium | Playwright</p>
         <div class="contact-info">
-            <p>Email: <a href="mailto:shreyanshManiTripathi8@gmail.com" style="color: #aad4ff;">shreyanshManiTripathi8@gmail.com</a></p>
-            <p>Mobile: 8604525668</p>
+            <a href="mailto:shreyanshManiTripathi8@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:8604525668"><i class="fas fa-phone"></i> 8604525668</a>
+            <a href="https://www.linkedin.com/in/shreyanshmanitripathi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </header>
     <div class="container">
-        <div class="photo">
-            <img src="C:\Users\aa\Desktop\Portfolio\Shreyansh.jpg" alt="Shreyansh Mani Tripathi">
+        <div class="photo-section">
+            <img src="Shreyansh.jpg" alt="Shreyansh Mani Tripathi">
+            <div class="hobbies-section">
+                <h3 id="str">Strengths</h3>
+                <ul>
+                    <li>Confidence</li>
+                    <li>Determination</li>
+                </ul>
+                <h3 id="hob">Hobbies</h3>
+                <ul>
+                    <li>Singing</li>
+                    <li>Playing Chess</li>
+                </ul>
+            </div>
         </div>
         <div class="right">
-            <h2>Profile Summary</h2>
-            <p>Experienced Software Tester with 3 years of expertise in both manual and automation testing using Selenium with Java and Playwright with JavaScript. Skilled in functional, regression, and exploratory testing, along with writing and executing test cases, defect tracking, and ensuring software quality. Proficient in developing and maintaining automation scripts, handling locators, and creating CI/CD pipelines using Jenkins.</p>
-
-            <h2>Education</h2>
-            <p><strong>B.Tech in Electronics and Communication Engineering</strong><br>
-            Uttar Pradesh Technical University, Lucknow – 2019</p>
-            <p><strong>PG Diploma in Advanced Computing</strong><br>
-            Sunbeam Institute of Information Technology – 2021</p>
-
-            <h2>Professional Experience</h2>
-            <p><strong>QA Engineer</strong><br>
-            Cybage Software Pvt Ltd – Jan 2022 to Present</p>
-
-            <h2>Skills</h2>
-            <ul>
-                <li>Web Automation Tools: Selenium, Playwright</li>
-                <li>Programming Language: Java</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>Performance Testing Tool: JMeter</li>
-                <li>CI/CD Pipeline: Jenkins</li>
-                <li>Defect Management Tools: Jira, Buganizer</li>
-                <li>Test Case Management Tool: TestRail</li>
-                <li>Version Control Systems: GitHub, GitLab</li>
-            </ul>
-
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Rocket Lawyer</h3>
-                <p><strong>Role:</strong> Automation testing using Playwright<br>
-                <strong>Team Size:</strong> 3</p>
+            <section>
+                <h2>Profile Summary</h2>
+                <p>Experienced Software Tester with 3 years of expertise in both manual and automation testing using Selenium with Java and Playwright with JavaScript. Skilled in functional, regression, and exploratory testing, along with writing and executing test cases, defect tracking, and ensuring software quality. Proficient in developing and maintaining automation scripts, handling locators, and creating CI/CD pipelines using Jenkins.</p>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <p><strong>B.Tech in Electronics and Communication Engineering</strong><br>
+                Uttar Pradesh Technical University, Lucknow – 2019</p>
+                <p><strong>PG Diploma in Advanced Computing</strong><br>
+                Sunbeam Institute of Information Technology – 2021</p>
+            </section>
+            <section>
+                <h2>Professional Experience</h2>
+                <p><strong>QA Engineer</strong><br>
+                Cybage Software Pvt Ltd – Jan 2022 to Present</p>
+            </section>
+            <section>
+                <h2>Skills</h2>
                 <ul>
-                    <li>Developed test cases and scenarios using Playwright</li>
-                    <li>Performed API Testing using Postman</li>
-                    <li>Communicated with development staff for bug-related issues</li>
-                    <li>Performed Load testing using JMeter</li>
-                    <li>Created CI/CD pipeline using Jenkins and GitHub webhooks</li>
-                    <li>Contributed in maintaining BDD framework with Cucumber and Allure Reports</li>
-                    <li>Performed Database testing using MySQL</li>
+                    <li>Web Automation Tools: Selenium, Playwright</li>
+                    <li>Programming Language: Java</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Performance Testing Tool: JMeter</li>
+                    <li>CI/CD Pipeline: Jenkins</li>
+                    <li>Defect Management Tools: Jira, Buganizer</li>
+                    <li>Test Case Management Tool: TestRail</li>
+                    <li>Version Control Systems: GitHub, GitLab</li>
                 </ul>
-            </div>
-
-            <div class="project">
-                <h3>Google Ads Others</h3>
-                <p><strong>Role:</strong> Manual and Automation testing using Selenium<br>
-                <strong>Team Size:</strong> 7</p>
-                <ul>
-                    <li>Developed and maintained automated test scripts using Java and Selenium WebDriver</li>
-                    <li>Prepared automation test scripts for regression suite</li>
-                    <li>Involved in end-to-end testing</li>
-                    <li>Logged defects in tracking tools and performed retesting on fixed patches</li>
-                </ul>
-            </div>
-
-            <h2>Strengths</h2>
-            <ul>
-                <li>Confidence</li>
-                <li>Determination</li>
-            </ul>
-
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Singing</li>
-                <li>Playing Chess</li>
-            </ul>
+            </section>
+            <section>
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Rocket Lawyer</h3>
+                    <p><strong>Role:</strong> Automation testing using Playwright<br>
+                    <strong>Team Size:</strong> 3</p>
+                    <ul>
+                        <li>Developed test cases and scenarios using Playwright</li>
+                        <li>Performed API Testing using Postman</li>
+                        <li>Communicated with development staff for bug-related issues</li>
+                        <li>Performed Load testing using JMeter</li>
+                        <li>Created CI/CD pipeline using Jenkins and GitHub webhooks</li>
+                        <li>Contributed in maintaining BDD framework with Cucumber and Allure Reports</li>
+                        <li>Performed Database testing using MySQL</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Google Ads Others</h3>
+                    <p><strong>Role:</strong> Manual and Automation testing using Selenium<br>
+                    <strong>Team Size:</strong> 7</p>
+                    <ul>
+                        <li>Developed and maintained automated test scripts using Java and Selenium WebDriver</li>
+                        <li>Prepared automation test scripts for regression suite</li>
+                        <li>Involved in end-to-end testing</li>
+                        <li>Logged defects in tracking tools and performed retesting on fixed patches</li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fecotree.green%2Fen%2Fblog%2Fwhat-is-a-tree&psig=AOvVaw1lkkrvE3cihXIHe26MaaTm&ust=1750590862474000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMix16axgo4DFQAAAAAdAAAAABAE" alt="image">
     <footer>
         <p>&copy; 2025 Shreyansh Mani Tripathi | All Rights Reserved</p>
     </footer>
