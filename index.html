@@ -63,6 +63,7 @@
             text-align: center;
             padding: 20px;
             color: white;
+            width: 100%;
         }
         .photo-section img {
             width: 180px;
@@ -90,17 +91,8 @@
             flex: 1;
             padding: 20px;
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #003366;
-        }
-        h3#str {
-            color: #02021a;
-        }
-         h3#hob {
-            color: #efeff5;
-        }
-        h3#str {
-            color: #e4e4f0;
         }
         h2 {
             border-bottom: 2px solid #e0e0e0;
@@ -135,6 +127,11 @@
             padding: 10px 0;
             margin-top: 30px;
         }
+        @media (max-width: 768px) {
+            .photo-section {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -149,14 +146,14 @@
     </header>
     <div class="container">
         <div class="photo-section">
-            <img src="Shreyansh.jpg" alt="Shreyansh Mani Tripathi">
+            <img src="1750501962373.jpg" alt="Shreyansh Mani Tripathi">
             <div class="hobbies-section">
-                <h3 id="str">Strengths</h3>
+                <h3>Strengths</h3>
                 <ul>
                     <li>Confidence</li>
                     <li>Determination</li>
                 </ul>
-                <h3 id="hob">Hobbies</h3>
+                <h3>Hobbies</h3>
                 <ul>
                     <li>Singing</li>
                     <li>Playing Chess</li>
